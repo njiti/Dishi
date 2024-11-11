@@ -1,5 +1,5 @@
-import 'package:dishi/app/app.dart';
-import 'package:dishi/bootstrap.dart';
+import 'app/view/app.dart';
+import 'bootstrap.dart';
 
 void main() {
   bootstrap(() => const App());

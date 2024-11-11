@@ -1,5 +1,5 @@
-import 'package:dishi/home/views/home_page.dart';
-import 'package:dishi/settings/cubit/settings_cubit.dart';
+import 'package:Dishi/home/views/home_page.dart';
+import 'package:Dishi/settings/cubit/settings_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

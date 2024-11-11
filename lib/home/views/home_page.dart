@@ -1,4 +1,4 @@
-import 'package:dishi/settings/view/setting_page.dart';
+import 'package:Dishi/settings/view/setting_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

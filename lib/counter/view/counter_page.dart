@@ -1,5 +1,5 @@
-import 'package:dishi/counter/counter.dart';
-import 'package:dishi/l10n/l10n.dart';
+import 'package:Dishi/counter/cubit/counter_cubit.dart';
+import 'package:Dishi/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
