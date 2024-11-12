@@ -1,8 +1,10 @@
 import 'package:Dishi/home/cubit/home_cubit.dart';
 import 'package:Dishi/l10n/l10n.dart';
+import 'package:Dishi/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
+
   const App({super.key});
 
   @override
@@ -17,7 +19,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const HomeCubit(),
+      home: const LoginScreen(),
     );
   }
 }

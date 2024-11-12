@@ -20,6 +20,11 @@ dependencies:
   http:
   dio:
   json_serializable:
+  hive:
+  hive_flutter:
+  image_picker:
+  flutter_staggered_animations:
+  velocity_x:
 
 dev_dependencies:
   bloc_test: ^9.1.7
@@ -29,7 +34,7 @@ dev_dependencies:
   very_good_analysis: ^6.0.0
   freezed: ^2.5.7
   build_runner: ^2.4.13
-  json_serializable:
+  hive_generator:
 
 flutter:
   uses-material-design: true

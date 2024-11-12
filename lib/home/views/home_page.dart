@@ -49,7 +49,6 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: GridView.count(
                   crossAxisCount: 2,
-                crossAxisSpacing: 0,
                 mainAxisSpacing: 10,
                 shrinkWrap: true,
                 children:List.generate(foods.length, (index){
