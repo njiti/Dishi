@@ -1,3 +1,5 @@
+import 'package:Dishi/foods/cubit/foods_cubit.dart';
+import 'package:Dishi/foods/repository/foods_repository.dart';
 import 'package:Dishi/home/views/home_page.dart';
 import 'package:Dishi/settings/cubit/settings_cubit.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ class HomeCubit extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => SettingsCubit()),
+        BlocProvider(create: (context) => FoodsCubit(FoodsRepository())),
       ],
       child: BlocBuilder<SettingsCubit, ThemeData>(
         builder: (context, state) {
