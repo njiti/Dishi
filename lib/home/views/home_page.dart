@@ -44,15 +44,56 @@ class _HomePageState extends State<HomePage> {
           if (state is InitFoodsState || state is LoadingFoodsState) {
             return const Center(child: CircularProgressIndicator());
           } else if (state is ResponseFoodsState) {
-            final todos = state.foods;
-            return ListView.builder(
-                itemCount: todos.length,
-                itemBuilder: (context, index) {
-                  final foods = todos[index];
-                  return ListTile(
-                    title: Text(foods.title),
+            final foods = state.foods;
+            return GestureDetector(
+              onTap: (){},
+              child: GridView.count(
+                  crossAxisCount: 2,
+                crossAxisSpacing: 0,
+                mainAxisSpacing: 10,
+                shrinkWrap: true,
+                children:List.generate(foods.length, (index){
+                  return Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white24,
+                          borderRadius: BorderRadius.circular(40),
+                        ),
+                        child: Column(
+                          children: [
+                            const SizedBox(height: 2),
+                            Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(100),
+                                image: new DecorationImage(
+                                    image: new NetworkImage(foods[index].image),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Padding(
+                                padding: const EdgeInsets.only(left: 10, right: 10),
+                                child: Text(
+                                  foods[index].title,
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                            )
+                          ],
+                        ),
+                      ),
                   );
-                });
+                }),
+              ),
+            );
           }
           return Center(child: Text(state.toString()));
         },

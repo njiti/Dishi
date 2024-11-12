@@ -5,8 +5,8 @@ import 'package:Dishi/foods/models/foods.dart';
 import 'package:http/http.dart' as http;
 
 class FoodsRepository {
-  final String baseUri = 'https://api.spoonacular.com/recipes/complexSearch?maxFat=35&number=&apiKey=2955470e3ee84af8b8859e0200a0ffdf';
-  final String access_token = '';
+  final String baseUri = "https://api.spoonacular.com/recipes/complexSearch?maxFat=35&number=&apiKey=2955470e3ee84af8b8859e0200a0ffdf";
+  final String access_token = "";
 
   Future<List<Result>> get() async{
     List<Result> data = [];
@@ -31,7 +31,6 @@ class FoodsRepository {
     }catch(e){
       return data;
     }
-    print('****FOODS CALLED SUCCESSFUL****');
     return data;
   }
 
