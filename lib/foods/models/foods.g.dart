@@ -41,7 +41,7 @@ Map<String, dynamic> _$$ResultImplToJson(_$ResultImpl instance) =>
     };
 
 const _$ImageTypeEnumMap = {
-  ImageType.JPG: 'JPG',
+  ImageType.JPG: 'jpg',
 };
 
 _$NutritionImpl _$$NutritionImplFromJson(Map<String, dynamic> json) =>
@@ -71,9 +71,9 @@ Map<String, dynamic> _$$NutrientImplToJson(_$NutrientImpl instance) =>
     };
 
 const _$NameEnumMap = {
-  Name.FAT: 'FAT',
+  Name.FAT: 'Fat',
 };
 
 const _$UnitEnumMap = {
-  Unit.G: 'G',
+  Unit.G: 'g',
 };

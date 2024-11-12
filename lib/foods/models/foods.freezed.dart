@@ -20,9 +20,13 @@ Foods _$FoodsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Foods {
+  @JsonKey(name: "results")
   List<Result> get results => throw _privateConstructorUsedError;
+  @JsonKey(name: "offset")
   int get offset => throw _privateConstructorUsedError;
+  @JsonKey(name: "number")
   int get number => throw _privateConstructorUsedError;
+  @JsonKey(name: "totalResults")
   int get totalResults => throw _privateConstructorUsedError;
 
   /// Serializes this Foods to a JSON map.
@@ -39,7 +43,11 @@ abstract class $FoodsCopyWith<$Res> {
   factory $FoodsCopyWith(Foods value, $Res Function(Foods) then) =
       _$FoodsCopyWithImpl<$Res, Foods>;
   @useResult
-  $Res call({List<Result> results, int offset, int number, int totalResults});
+  $Res call(
+      {@JsonKey(name: "results") List<Result> results,
+      @JsonKey(name: "offset") int offset,
+      @JsonKey(name: "number") int number,
+      @JsonKey(name: "totalResults") int totalResults});
 }
 
 /// @nodoc
@@ -90,7 +98,11 @@ abstract class _$$FoodsImplCopyWith<$Res> implements $FoodsCopyWith<$Res> {
       __$$FoodsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Result> results, int offset, int number, int totalResults});
+  $Res call(
+      {@JsonKey(name: "results") List<Result> results,
+      @JsonKey(name: "offset") int offset,
+      @JsonKey(name: "number") int number,
+      @JsonKey(name: "totalResults") int totalResults});
 }
 
 /// @nodoc
@@ -136,10 +148,10 @@ class __$$FoodsImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$FoodsImpl implements _Foods {
   const _$FoodsImpl(
-      {required final List<Result> results,
-      required this.offset,
-      required this.number,
-      required this.totalResults})
+      {@JsonKey(name: "results") required final List<Result> results,
+      @JsonKey(name: "offset") required this.offset,
+      @JsonKey(name: "number") required this.number,
+      @JsonKey(name: "totalResults") required this.totalResults})
       : _results = results;
 
   factory _$FoodsImpl.fromJson(Map<String, dynamic> json) =>
@@ -147,6 +159,7 @@ class _$FoodsImpl implements _Foods {
 
   final List<Result> _results;
   @override
+  @JsonKey(name: "results")
   List<Result> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
@@ -154,10 +167,13 @@ class _$FoodsImpl implements _Foods {
   }
 
   @override
+  @JsonKey(name: "offset")
   final int offset;
   @override
+  @JsonKey(name: "number")
   final int number;
   @override
+  @JsonKey(name: "totalResults")
   final int totalResults;
 
   @override
@@ -204,20 +220,25 @@ class _$FoodsImpl implements _Foods {
 
 abstract class _Foods implements Foods {
   const factory _Foods(
-      {required final List<Result> results,
-      required final int offset,
-      required final int number,
-      required final int totalResults}) = _$FoodsImpl;
+          {@JsonKey(name: "results") required final List<Result> results,
+          @JsonKey(name: "offset") required final int offset,
+          @JsonKey(name: "number") required final int number,
+          @JsonKey(name: "totalResults") required final int totalResults}) =
+      _$FoodsImpl;
 
   factory _Foods.fromJson(Map<String, dynamic> json) = _$FoodsImpl.fromJson;
 
   @override
+  @JsonKey(name: "results")
   List<Result> get results;
   @override
+  @JsonKey(name: "offset")
   int get offset;
   @override
+  @JsonKey(name: "number")
   int get number;
   @override
+  @JsonKey(name: "totalResults")
   int get totalResults;
 
   /// Create a copy of Foods
@@ -234,10 +255,15 @@ Result _$ResultFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Result {
+  @JsonKey(name: "id")
   int get id => throw _privateConstructorUsedError;
+  @JsonKey(name: "title")
   String get title => throw _privateConstructorUsedError;
+  @JsonKey(name: "image")
   String get image => throw _privateConstructorUsedError;
+  @JsonKey(name: "imageType")
   ImageType get imageType => throw _privateConstructorUsedError;
+  @JsonKey(name: "nutrition")
   Nutrition get nutrition => throw _privateConstructorUsedError;
 
   /// Serializes this Result to a JSON map.
@@ -255,11 +281,11 @@ abstract class $ResultCopyWith<$Res> {
       _$ResultCopyWithImpl<$Res, Result>;
   @useResult
   $Res call(
-      {int id,
-      String title,
-      String image,
-      ImageType imageType,
-      Nutrition nutrition});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "title") String title,
+      @JsonKey(name: "image") String image,
+      @JsonKey(name: "imageType") ImageType imageType,
+      @JsonKey(name: "nutrition") Nutrition nutrition});
 
   $NutritionCopyWith<$Res> get nutrition;
 }
@@ -328,11 +354,11 @@ abstract class _$$ResultImplCopyWith<$Res> implements $ResultCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int id,
-      String title,
-      String image,
-      ImageType imageType,
-      Nutrition nutrition});
+      {@JsonKey(name: "id") int id,
+      @JsonKey(name: "title") String title,
+      @JsonKey(name: "image") String image,
+      @JsonKey(name: "imageType") ImageType imageType,
+      @JsonKey(name: "nutrition") Nutrition nutrition});
 
   @override
   $NutritionCopyWith<$Res> get nutrition;
@@ -386,24 +412,29 @@ class __$$ResultImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResultImpl implements _Result {
   const _$ResultImpl(
-      {required this.id,
-      required this.title,
-      required this.image,
-      required this.imageType,
-      required this.nutrition});
+      {@JsonKey(name: "id") required this.id,
+      @JsonKey(name: "title") required this.title,
+      @JsonKey(name: "image") required this.image,
+      @JsonKey(name: "imageType") required this.imageType,
+      @JsonKey(name: "nutrition") required this.nutrition});
 
   factory _$ResultImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResultImplFromJson(json);
 
   @override
+  @JsonKey(name: "id")
   final int id;
   @override
+  @JsonKey(name: "title")
   final String title;
   @override
+  @JsonKey(name: "image")
   final String image;
   @override
+  @JsonKey(name: "imageType")
   final ImageType imageType;
   @override
+  @JsonKey(name: "nutrition")
   final Nutrition nutrition;
 
   @override
@@ -448,23 +479,29 @@ class _$ResultImpl implements _Result {
 
 abstract class _Result implements Result {
   const factory _Result(
-      {required final int id,
-      required final String title,
-      required final String image,
-      required final ImageType imageType,
-      required final Nutrition nutrition}) = _$ResultImpl;
+          {@JsonKey(name: "id") required final int id,
+          @JsonKey(name: "title") required final String title,
+          @JsonKey(name: "image") required final String image,
+          @JsonKey(name: "imageType") required final ImageType imageType,
+          @JsonKey(name: "nutrition") required final Nutrition nutrition}) =
+      _$ResultImpl;
 
   factory _Result.fromJson(Map<String, dynamic> json) = _$ResultImpl.fromJson;
 
   @override
+  @JsonKey(name: "id")
   int get id;
   @override
+  @JsonKey(name: "title")
   String get title;
   @override
+  @JsonKey(name: "image")
   String get image;
   @override
+  @JsonKey(name: "imageType")
   ImageType get imageType;
   @override
+  @JsonKey(name: "nutrition")
   Nutrition get nutrition;
 
   /// Create a copy of Result
@@ -481,6 +518,7 @@ Nutrition _$NutritionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Nutrition {
+  @JsonKey(name: "nutrients")
   List<Nutrient> get nutrients => throw _privateConstructorUsedError;
 
   /// Serializes this Nutrition to a JSON map.
@@ -498,7 +536,7 @@ abstract class $NutritionCopyWith<$Res> {
   factory $NutritionCopyWith(Nutrition value, $Res Function(Nutrition) then) =
       _$NutritionCopyWithImpl<$Res, Nutrition>;
   @useResult
-  $Res call({List<Nutrient> nutrients});
+  $Res call({@JsonKey(name: "nutrients") List<Nutrient> nutrients});
 }
 
 /// @nodoc
@@ -535,7 +573,7 @@ abstract class _$$NutritionImplCopyWith<$Res>
       __$$NutritionImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Nutrient> nutrients});
+  $Res call({@JsonKey(name: "nutrients") List<Nutrient> nutrients});
 }
 
 /// @nodoc
@@ -565,7 +603,8 @@ class __$$NutritionImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$NutritionImpl implements _Nutrition {
-  const _$NutritionImpl({required final List<Nutrient> nutrients})
+  const _$NutritionImpl(
+      {@JsonKey(name: "nutrients") required final List<Nutrient> nutrients})
       : _nutrients = nutrients;
 
   factory _$NutritionImpl.fromJson(Map<String, dynamic> json) =>
@@ -573,6 +612,7 @@ class _$NutritionImpl implements _Nutrition {
 
   final List<Nutrient> _nutrients;
   @override
+  @JsonKey(name: "nutrients")
   List<Nutrient> get nutrients {
     if (_nutrients is EqualUnmodifiableListView) return _nutrients;
     // ignore: implicit_dynamic_type
@@ -615,13 +655,15 @@ class _$NutritionImpl implements _Nutrition {
 }
 
 abstract class _Nutrition implements Nutrition {
-  const factory _Nutrition({required final List<Nutrient> nutrients}) =
-      _$NutritionImpl;
+  const factory _Nutrition(
+      {@JsonKey(name: "nutrients")
+      required final List<Nutrient> nutrients}) = _$NutritionImpl;
 
   factory _Nutrition.fromJson(Map<String, dynamic> json) =
       _$NutritionImpl.fromJson;
 
   @override
+  @JsonKey(name: "nutrients")
   List<Nutrient> get nutrients;
 
   /// Create a copy of Nutrition
@@ -638,8 +680,11 @@ Nutrient _$NutrientFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Nutrient {
+  @JsonKey(name: "name")
   Name get name => throw _privateConstructorUsedError;
+  @JsonKey(name: "amount")
   double get amount => throw _privateConstructorUsedError;
+  @JsonKey(name: "unit")
   Unit get unit => throw _privateConstructorUsedError;
 
   /// Serializes this Nutrient to a JSON map.
@@ -657,7 +702,10 @@ abstract class $NutrientCopyWith<$Res> {
   factory $NutrientCopyWith(Nutrient value, $Res Function(Nutrient) then) =
       _$NutrientCopyWithImpl<$Res, Nutrient>;
   @useResult
-  $Res call({Name name, double amount, Unit unit});
+  $Res call(
+      {@JsonKey(name: "name") Name name,
+      @JsonKey(name: "amount") double amount,
+      @JsonKey(name: "unit") Unit unit});
 }
 
 /// @nodoc
@@ -704,7 +752,10 @@ abstract class _$$NutrientImplCopyWith<$Res>
       __$$NutrientImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Name name, double amount, Unit unit});
+  $Res call(
+      {@JsonKey(name: "name") Name name,
+      @JsonKey(name: "amount") double amount,
+      @JsonKey(name: "unit") Unit unit});
 }
 
 /// @nodoc
@@ -745,16 +796,21 @@ class __$$NutrientImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NutrientImpl implements _Nutrient {
   const _$NutrientImpl(
-      {required this.name, required this.amount, required this.unit});
+      {@JsonKey(name: "name") required this.name,
+      @JsonKey(name: "amount") required this.amount,
+      @JsonKey(name: "unit") required this.unit});
 
   factory _$NutrientImpl.fromJson(Map<String, dynamic> json) =>
       _$$NutrientImplFromJson(json);
 
   @override
+  @JsonKey(name: "name")
   final Name name;
   @override
+  @JsonKey(name: "amount")
   final double amount;
   @override
+  @JsonKey(name: "unit")
   final Unit unit;
 
   @override
@@ -794,18 +850,21 @@ class _$NutrientImpl implements _Nutrient {
 
 abstract class _Nutrient implements Nutrient {
   const factory _Nutrient(
-      {required final Name name,
-      required final double amount,
-      required final Unit unit}) = _$NutrientImpl;
+      {@JsonKey(name: "name") required final Name name,
+      @JsonKey(name: "amount") required final double amount,
+      @JsonKey(name: "unit") required final Unit unit}) = _$NutrientImpl;
 
   factory _Nutrient.fromJson(Map<String, dynamic> json) =
       _$NutrientImpl.fromJson;
 
   @override
+  @JsonKey(name: "name")
   Name get name;
   @override
+  @JsonKey(name: "amount")
   double get amount;
   @override
+  @JsonKey(name: "unit")
   Unit get unit;
 
   /// Create a copy of Nutrient

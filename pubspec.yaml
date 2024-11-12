@@ -17,6 +17,9 @@ dependencies:
   freezed_annotation: ^2.4.4
   shared_preferences: ^2.2.2
   json_annotation: ^4.9.0
+  http:
+  dio:
+  json_serializable:
 
 dev_dependencies:
   bloc_test: ^9.1.7
@@ -26,7 +29,7 @@ dev_dependencies:
   very_good_analysis: ^6.0.0
   freezed: ^2.5.7
   build_runner: ^2.4.13
-  json_serializable: ^6.8.0
+  json_serializable:
 
 flutter:
   uses-material-design: true
